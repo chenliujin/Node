@@ -12,4 +12,4 @@
 - SMTP appender
 
 # 参考文献
-- [log4js](https://www.npmjs.com/package/log4js)
+- [官方手册](https://log4js-node.github.io/log4js-node/index.html)

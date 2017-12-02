@@ -20,9 +20,23 @@
 +-- request@2.81.0
  -- solr@0.3.0
 
+---
 
 # 模块的安装
 - npm
 - cnpm
 
 ## 安装路径
+
+### Debian
+- /usr/local/bin/node
+- /usr/local/lib/node_modules
+
+### CentOS 7
+- /usr/bin/node
+- /usr/lib/node_modules
+
+## 全局模式安装
+```
+$ npm install express -g
+```

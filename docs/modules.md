@@ -29,7 +29,7 @@
 ## 安装路径
 
 ### 环境变量
-- NODE_PATH
+- NODE_PATH：需配置环境变量，否则无法正常加载相关模块
 
 ### Debian
 - /usr/local/bin/node

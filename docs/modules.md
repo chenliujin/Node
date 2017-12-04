@@ -28,6 +28,9 @@
 
 ## 安装路径
 
+### 环境变量
+- NODE_PATH
+
 ### Debian
 - /usr/local/bin/node
 - /usr/local/lib/node_modules

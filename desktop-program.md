@@ -4,6 +4,6 @@
 
 
 # 架构 
-- angular / react / vue
+- 前端框架：angular / react / vue
 - node-webkit / electron
 - linux + gnome

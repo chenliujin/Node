@@ -1,4 +1,4 @@
-FROM node:6.10.2
+FROM node:6.12.3
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 

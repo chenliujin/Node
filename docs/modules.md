@@ -1,6 +1,7 @@
 
 # modules
 - [ipware](https://github.com/un33k/node-ipware)
+- mongodb
 
 /usr/local/lib
 +-- bindings@1.2.1

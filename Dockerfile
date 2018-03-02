@@ -8,5 +8,6 @@ RUN \
 	npm install \
 		express \
 		mqtt \
+		moment \
 		-g
 	

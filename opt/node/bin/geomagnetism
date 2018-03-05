@@ -1,0 +1,7 @@
+#!/usr/local/bin/npm
+
+cd /data/www
+
+npm install 
+
+npm start

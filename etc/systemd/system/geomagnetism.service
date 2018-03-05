@@ -1,0 +1,11 @@
+[Unit]
+Description=rsync upload image
+
+[Service]
+ExecStart=/opt/node/bin/geomagnetism.sh
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

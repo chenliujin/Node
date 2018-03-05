@@ -4,7 +4,6 @@ MAINTAINER chenliujin <liujin.chen@qq.com>
 
 ENV NODE_PATH /usr/local/lib/node_modules
 
-COPY ./opt/node /opt/node
 COPY ./etc/systemd/system /etc/systemd/system
 	
 RUN npm config set registry https://registry.npm.taobao.org/
@@ -20,4 +19,7 @@ RUN \
 		cookie-parser \
 		-g
 
+EXPOSE 80
+
+CMD ["/bin/systemd"]
 

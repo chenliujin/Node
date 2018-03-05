@@ -2,7 +2,7 @@
 Description=rsync upload image
 
 [Service]
-ExecStart=/opt/node/bin/geomagnetism
+ExecStart=/usr/local/bin/node /data/www/bin/www
 Restart=always
 User=root
 Group=root

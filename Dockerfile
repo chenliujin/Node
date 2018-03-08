@@ -12,11 +12,18 @@ RUN npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
 RUN \
 	npm install \
 		express \
+		events \
 		mqtt \
+		mysql \
+		mongodb \
 		moment \
+		nsqjs \
 		body-parser \
 		debug \
 		cookie-parser \
+		redis \
+		request \
+		solr \
 		-g
 
 EXPOSE 80

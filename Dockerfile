@@ -15,7 +15,7 @@ RUN \
 		events \
 		mqtt \
 		mysql \
-		mongodb \
+		#mongodb \
 		moment \
 		nsqjs \
 		body-parser \

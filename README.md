@@ -1,4 +1,3 @@
-
 # 目录结构
 - History.md // 项目改动历史
 - INSTALL.md // 安装说明
@@ -20,7 +19,7 @@
 - bin // 可执行脚本
 - config // 配置目录
 - logs // 日志目录
-- models
+- model
 - app.js
 
 

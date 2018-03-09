@@ -2,6 +2,9 @@ FROM node:8.9.4
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
+# 1.修改时区
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+
 ENV NODE_PATH /usr/local/lib/node_modules
 
 COPY ./etc/systemd/system /etc/systemd/system

@@ -18,10 +18,10 @@ RUN npm install body-parser -g
 RUN npm install debug -g
 RUN npm install cookie-parser -g
 RUN npm install redis -g
+RUN npm install request -g
 		#events \
 		#mongodb \
 		#nsqjs \
-		#request \
 		#solr \
 
 COPY ./etc/systemd/system /etc/systemd/system

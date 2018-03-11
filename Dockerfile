@@ -28,9 +28,13 @@ RUN npm install jade -g
 		#nsqjs \
 		#solr \
 
+RUN /usr/local/bin/express /data/www
+
 COPY ./etc/systemd/system /etc/systemd/system
 
-EXPOSE 80
+RUN systemctl enable node-server
+
+EXPOSE 80 3000
 
 CMD ["/bin/systemd"]
 

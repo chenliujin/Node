@@ -11,6 +11,7 @@ RUN npm config set registry https://registry.npm.taobao.org/
 RUN npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
 
 RUN npm install express -g
+RUN npm install express-generator -g
 RUN npm install mqtt -g
 RUN npm install mysql -g
 RUN npm install moment -g

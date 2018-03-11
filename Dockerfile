@@ -30,9 +30,13 @@ RUN npm install jade -g
 
 RUN /usr/local/bin/express /data/www
 
+RUN apt-get update 
+RUN apt-get install -y nginx
+
 COPY ./etc/systemd/system /etc/systemd/system
 
 RUN systemctl enable node-server
+RUN systemctl enable nginx
 
 EXPOSE 80 3000
 

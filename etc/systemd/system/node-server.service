@@ -1,0 +1,12 @@
+[Unit]
+Description=rsync upload image
+
+[Service]
+ExecStart=/usr/local/bin/node /data/www/bin/www
+Restart=always
+User=root
+Group=root
+Environment=NODE_PATH=/usr/local/lib/node_modules
+
+[Install]
+WantedBy=multi-user.target

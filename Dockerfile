@@ -20,6 +20,9 @@ RUN npm install debug -g
 RUN npm install cookie-parser -g
 RUN npm install redis -g
 RUN npm install request -g
+RUN npm install serve-favicon -g
+RUN npm install morgan -g
+RUN npm install jade -g
 		#events \
 		#mongodb \
 		#nsqjs \

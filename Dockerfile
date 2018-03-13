@@ -5,6 +5,8 @@ MAINTAINER chenliujin <liujin.chen@qq.com>
 # 1.修改时区
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 
+RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
 ENV NODE_PATH /usr/local/lib/node_modules
 	
 RUN npm config set registry https://registry.npm.taobao.org/

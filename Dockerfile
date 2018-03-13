@@ -1,13 +1,11 @@
-FROM centos:latest 
+FROM node:8.9.4
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
-RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash -
+# 1.修改时区
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 
-RUN yum install -y nodejs
-
-
-ENV NODE_PATH /usr/lib/node_modules
+ENV NODE_PATH /usr/local/lib/node_modules
 	
 RUN npm config set registry https://registry.npm.taobao.org/
 RUN npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
@@ -33,17 +31,17 @@ RUN npm install serve-favicon -g
 		#nsqjs \
 		#solr \
 
-RUN /usr/bin/express /data/www
+RUN /usr/local/bin/express /data/www
 
-#RUN apt-get update 
-#RUN apt-get install -y nginx
+RUN apt-get update 
+RUN apt-get install -y nginx
 
 COPY ./etc/systemd/system /etc/systemd/system
 
 RUN systemctl enable node-server
-#RUN systemctl enable nginx
+RUN systemctl enable nginx
 
 EXPOSE 80 3000
 
-CMD ["/usr/sbin/init"]
+CMD ["/bin/systemd"]
 

@@ -36,7 +36,7 @@ RUN npm install serve-favicon -g
 RUN /usr/local/bin/express /data/www
 
 RUN apt-get update 
-RUN apt-get install -y nginx
+#RUN apt-get install -y nginx
 RUN apt-get install -y vim
 
 COPY ./etc/systemd/system /etc/systemd/system

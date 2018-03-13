@@ -6,6 +6,10 @@ MAINTAINER chenliujin <liujin.chen@qq.com>
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
+RUN curl http://mirrors.163.com/.help/sources.list.jessie > /etc/apt/sources.list 
+RUN apt-get update 
+RUN apt-get install -y vim
+#RUN apt-get install -y nginx
 
 ENV NODE_PATH /usr/local/lib/node_modules
 	
@@ -35,9 +39,6 @@ RUN npm install serve-favicon -g
 
 RUN /usr/local/bin/express /data/www
 
-RUN apt-get update 
-#RUN apt-get install -y nginx
-RUN apt-get install -y vim
 
 COPY ./etc/systemd/system /etc/systemd/system
 

@@ -1,18 +1,13 @@
-FROM node:8.10.0
+FROM centos:7.4.1708-beta.1
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
-# 1.修改时区
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+ENV NODE_PATH /usr/lib/node_modules
 
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
-RUN curl http://mirrors.163.com/.help/sources.list.jessie > /etc/apt/sources.list 
-RUN apt-get update 
-RUN apt-get install -y vim
-#RUN apt-get install -y nginx
+RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 
-ENV NODE_PATH /usr/local/lib/node_modules
-	
+RUN yum install -y nodejs
+
 RUN npm config set registry https://registry.npm.taobao.org/
 RUN npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
 
@@ -32,20 +27,21 @@ RUN npm install jade -g
 RUN npm install morgan -g
 RUN npm install serve-favicon -g
 
+RUN npm install -g md5
+
 		#events \
 		#mongodb \
 		#nsqjs \
 		#solr \
 
-RUN /usr/local/bin/express /data/www
+RUN /usr/bin/express /data/www
 
+#RUN apt-get update 
+#RUN apt-get install -y nginx
 
-COPY ./etc/systemd/system /etc/systemd/system
+COPY ./etc/systemd/system/centos /etc/systemd/system
 
 RUN systemctl enable node-server
 #RUN systemctl enable nginx
 
-
 EXPOSE 80 3000
-
-CMD ["/bin/systemd"]

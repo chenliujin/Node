@@ -1,0 +1,12 @@
+[Unit]
+Description=node-server
+
+[Service]
+ExecStart=/usr/bin/node /data/www/bin/www
+Restart=always
+User=root
+Group=root
+Environment=NODE_PATH=/usr/lib/node_modules
+
+[Install]
+WantedBy=multi-user.target

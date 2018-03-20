@@ -1,4 +1,4 @@
-FROM centos:7.4.1708-beta.3
+FROM centos:7.4.1708-beta.4
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
@@ -39,5 +39,3 @@ COPY ./etc/systemd/system/centos /etc/systemd/system
 RUN systemctl enable node-server
 
 EXPOSE 80 3000
-
-# > 8.10.0-centos.3

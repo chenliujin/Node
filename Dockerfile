@@ -46,4 +46,4 @@ RUN systemctl enable node-server
 
 EXPOSE 80 3000
 
-# > 8.10.0-centos.1
+# > 8.10.0-centos.2

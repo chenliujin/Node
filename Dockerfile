@@ -45,3 +45,5 @@ RUN systemctl enable node-server
 #RUN systemctl enable nginx
 
 EXPOSE 80 3000
+
+# > 8.10.0-centos.1

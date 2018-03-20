@@ -1,4 +1,4 @@
-FROM centos:7.4.1708-beta.2
+FROM centos:7.4.1708-beta.3
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 

@@ -1,4 +1,4 @@
-FROM centos:7.4.1708-beta.1
+FROM centos:7.4.1708-beta.2
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
@@ -11,39 +11,33 @@ RUN yum install -y nodejs
 RUN npm config set registry https://registry.npm.taobao.org/
 RUN npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
 
-RUN npm install mqtt -g
-RUN npm install mysql -g
-RUN npm install moment -g
-RUN npm install redis -g
-RUN npm install request -g
-
 # express
-RUN npm install body-parser -g
-RUN npm install cookie-parser -g
-RUN npm install debug -g
-RUN npm install express -g
-RUN npm install express-generator -g
-RUN npm install jade -g
-RUN npm install morgan -g
-RUN npm install serve-favicon -g
+RUN npm install -g body-parser
+RUN npm install -g cookie-parser
+RUN npm install -g debug
+RUN npm install -g express
+RUN npm install -g express-generator
+RUN npm install -g jade
+RUN npm install -g morgan
+RUN npm install -g serve-favicon
 
+
+RUN npm install -g mqtt 
+RUN npm install -g mysql
+RUN npm install -g moment
 RUN npm install -g md5
-
+RUN npm install -g redis
+RUN npm install -g request
 		#events \
-		#mongodb \
 		#nsqjs \
 		#solr \
 
 RUN /usr/bin/express /data/www
 
-#RUN apt-get update 
-#RUN apt-get install -y nginx
-
 COPY ./etc/systemd/system/centos /etc/systemd/system
 
 RUN systemctl enable node-server
-#RUN systemctl enable nginx
 
 EXPOSE 80 3000
 
-# > 8.10.0-centos.2
+# > 8.10.0-centos.3

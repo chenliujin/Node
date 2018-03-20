@@ -1,5 +1,5 @@
 [Unit]
-Description=rsync upload image
+Description=node-server
 
 [Service]
 ExecStart=/usr/local/bin/node /data/www/bin/www

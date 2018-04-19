@@ -28,6 +28,7 @@ RUN npm install -g moment
 RUN npm install -g md5
 RUN npm install -g redis
 RUN npm install -g request
+RUN npm install -g querystring 
 		#events \
 		#nsqjs \
 		#solr \

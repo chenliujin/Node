@@ -29,14 +29,15 @@ RUN npm install -g md5
 RUN npm install -g redis
 RUN npm install -g request
 RUN npm install -g querystring 
+RUN npm install -g node-csv 
 		#events \
 		#nsqjs \
 		#solr \
 
-RUN /usr/bin/express /data/www
+#RUN /usr/bin/express /data/www
 
 COPY ./etc/systemd/system/centos /etc/systemd/system
 
-RUN systemctl enable node-server
+#RUN systemctl enable node-server
 
 EXPOSE 80 3000
